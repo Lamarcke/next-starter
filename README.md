@@ -1,4 +1,4 @@
-# next-mantine-tailwind-example
+# next-starter
 This is a [Next.js](https://nextjs.org/docs) app scaffolded with `create-next-app`, which includes [Mantine]() and [TailwindCSS]() for components and styling.  
 
 
