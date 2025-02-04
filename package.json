@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "^7.3.1",
-    "@mantine/hooks": "^7.3.1",
-    "next": "14.0.4",
+    "@mantine/carousel": "^7.16.2",
+    "@mantine/core": "^7.16.2",
+    "@mantine/hooks": "^7.16.2",
+    "embla-carousel-react": "^7.1.0",
+    "next": "15.1.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwind-preset-mantine": "^1.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",

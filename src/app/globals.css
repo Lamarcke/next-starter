@@ -1,8 +1,6 @@
-/**
-This is what allows us to use Mantine with TailwindCSS without conflicts.
- */
-@layer tailwind {
-  @tailwind base;
-}
 @tailwind components;
 @tailwind utilities;
+
+@layer tailwind {
+    @tailwind base;
+}

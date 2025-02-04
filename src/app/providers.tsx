@@ -1,17 +1,23 @@
 "use client"
 import React, {PropsWithChildren} from 'react';
-import { Inter } from 'next/font/google'
-import {createTheme, MantineProvider} from "@mantine/core";
+import {Inter, Montserrat, Instrument_Sans} from 'next/font/google'
+import {createTheme, DEFAULT_THEME, MantineProvider, mergeMantineTheme} from "@mantine/core";
 
-const inter = Inter({ subsets: ['latin'] })
+const instrumentSans = Instrument_Sans({
+    subsets: ["latin"]
+})
+
+const montserrat = Montserrat({
+    subsets: ["latin"],
+})
 
 const theme = createTheme({
-    fontFamily: inter.className
+    fontFamily: instrumentSans.style.fontFamily,
 })
 
 const Providers = ({children}: PropsWithChildren) => {
     return (
-        <MantineProvider theme={theme}>
+        <MantineProvider theme={mergeMantineTheme(DEFAULT_THEME, theme)}>
             {children}
         </MantineProvider>
     );

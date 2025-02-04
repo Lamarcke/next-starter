@@ -1,10 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import {Instrument_Sans, Montserrat} from 'next/font/google'
+// BEFORE Tailwind styles import
 import "@mantine/core/styles.css"
+import '@mantine/carousel/styles.css';
+
+// ALWAYS after Mantine
+import './globals.css'
 import Providers from "@/app/providers";
 import {ColorSchemeScript} from "@mantine/core";
-const inter = Inter({ subsets: ['latin'] })
+
+const instrumentSans = Instrument_Sans({
+    subsets: ["latin"]
+})
+
+const montserrat = Montserrat({
+    subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: 'Mantine + Tailwind example',
@@ -21,7 +32,9 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
+      <body className={instrumentSans.className} style={{
+          backgroundColor: "#fff"
+      }}>
         <Providers>{children}</Providers>
       </body>
     </html>
